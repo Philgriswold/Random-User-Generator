@@ -10,8 +10,13 @@
 </head>
 
 <body>
-
-    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <div id="app"></div>
+    <h1>Hello {{firstName}}</h1>
+    <img :class="gender" :src="picture" :alt="`$ {firstName} ${lastName} `" />
+    <h3>Email: {{email}}</h3>
+    <button v-on:click="getUser" :class="gender">Get Random User</button>
+    <script src="https://unpkg.com/vue@3.0.5">
+    </script>
     <script src="app.js"></script>
 
 </html>
