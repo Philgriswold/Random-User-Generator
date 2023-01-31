@@ -10,6 +10,7 @@ const app = Vue.createApp({
     },
     methods: {
         async getUser() {
+            console.log(this.firstName)
             const res = await fetch('https://randomuser.me/api')
             const { results } = await res.json()
 
@@ -21,4 +22,6 @@ const app = Vue.createApp({
         },
     },
 })
+
+app.mount('#app')
 
